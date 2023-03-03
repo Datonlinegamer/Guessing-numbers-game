@@ -1,2 +1,2 @@
 # Guessing-numbers-game
-Gess a number between 1 an 100
+Guess a number between 1 an 100
