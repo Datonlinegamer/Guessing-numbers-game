@@ -1,0 +1,9 @@
+{
+  "C_Cpp.errorSquiggles": "disabled",
+  "files.associations": {
+    "Makefile": "cmake",
+    "cstdlib": "cpp",
+    "ostream": "cpp",
+    "iostream": "cpp"
+  }
+}
