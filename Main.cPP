@@ -4,32 +4,42 @@
 
 using namespace std;
 
+
+class Main
+{
+public:
+    void Guessing()
+    {
+        srand(time(NULL));
+        int num = rand() % 100 + 1;
+        int guess = 0;
+        int tries = 0;
+
+        while (guess != num)
+        {
+            cout << "Enter your guess (1-100): ";
+            cin >> guess;
+
+            if (guess > num)
+            {
+                cout << "Too high, try again.\n\n";
+            }
+            else if (guess < num)
+            {
+                cout << "Too low, try again.\n\n";
+            }
+
+            tries++;
+        }
+
+        cout << "Congratulations! You guessed the number " << num << " in " << tries << " tries." << endl;
+    }
+};
+
 int main()
 {
-    int guess, num, tries = 0;
-
-    srand(time(NULL));
-    num = rand() % 100 + 1;
-
-    cout << "Guess the number between 1 and 100!💯 \n\n";
-
-    do
-    {
-        cout << "Enter your guess (1-100): ";
-        cin >> guess;
-
-        if (guess > num)
-        {
-            cout << "Too high, try again.\n\n";
-        }
-        else if (guess < num)
-        {
-            cout << "Too low, try again.\n\n";
-        }
-        tries++;
-    } while (guess != num);
-
-    cout << "\nCool! You guessed the number in " << tries << " tries.";
+    Main game;
+    game.Guessing();
 
     return 0;
 }
